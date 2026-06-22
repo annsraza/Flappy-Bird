@@ -62,7 +62,7 @@ def draw_bird(screen, x, y):
 
 def draw_pipe(screen, x, gap_start, gap_size):
 
-    pipe_width = 13
+    pipe_width = 14
 
     for row in range(HEIGHT - 1):
 
