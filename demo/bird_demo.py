@@ -11,7 +11,8 @@ def main(stdscr):
 
     borders = Borders()
 
-    bird = Bird()
+    # Bird starts in the vertical center of the terminal
+    bird = Bird(renderer.height)
 
     renderer.clear()
 

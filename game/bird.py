@@ -6,20 +6,19 @@ Represents the player-controlled bird.
 
 from game.constants import (
     BIRD_START_X,
-    BIRD_START_Y,
+    GRAVITY,
+    JUMP_STRENGTH,
 )
 
 
 class Bird:
 
-    def __init__(self):
+    def __init__(self, renderer):
 
         self.x = BIRD_START_X
 
-        # Stored as float for smooth movement later
-        self.y = float(BIRD_START_Y)
+        self.y = renderer.height / 2
 
-        # Vertical speed
         self.velocity = 0.0
 
         self.sprite = [
@@ -27,3 +26,8 @@ class Bird:
             " {||",
             '--""--'
         ]
+    def apply_gravity(self):
+        self.velocity += GRAVITY
+        self.y += self.velocity
+    def jump(self):
+        self.velocity = JUMP_STRENGTH

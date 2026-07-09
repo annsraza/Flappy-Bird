@@ -1,8 +1,11 @@
 class Renderer:
 
+    
+
     def __init__(self, screen):
         self.screen = screen
 
+        self.height, self.width = self.screen.getmaxyx()
     def clear(self):
         self.screen.clear()
 
