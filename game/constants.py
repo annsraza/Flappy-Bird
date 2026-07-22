@@ -1,6 +1,15 @@
-
+# Game
 FPS = 60
 
-GRAVITY = 0.25
+# Bird
+BIRD_START_X = 20
 
-JUMP_STRENGTH = -3.5
+# Physics
+GRAVITY = 0.08
+JUMP_STRENGTH = -2.0
+MAX_FALL_SPEED = 2.5
+
+# Pipes (for later)
+PIPE_WIDTH = 10
+PIPE_GAP = 8
+PIPE_SPEED = 1
